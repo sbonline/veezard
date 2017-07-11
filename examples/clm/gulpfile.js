@@ -1,1 +1,1 @@
-require('veeva-techb')(require('gulp'));
+require('veezard')(require('gulp'));
