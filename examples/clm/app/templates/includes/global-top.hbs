@@ -1,0 +1,30 @@
+{{debug}}
+
+<header>
+  <div class="dd-main">
+
+    <ul>
+      {{#each keyMessages}}
+
+        {{#contains key_message section}}
+          <li>
+            <a href="#" >
+              {{../description}}
+            </a>
+          </li>
+        {{/contains}}
+      {{/each}}
+
+      {{#each keyMessages}}
+        {{#isnt kmsg.key_message section}}
+          <li>
+            <a href="#" data-key-message="{{kmsg.key_message}}" class="btn-external">
+              {{kmsg.description}}
+            </a>
+          </li>
+        {{/isnt}}
+      {{/each}}
+    </ul>
+    <img class="triangle" src="global/images/triangle.svg" width="16" height="16" />
+  </div>
+</header>
