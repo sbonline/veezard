@@ -1,5 +1,6 @@
 {
   "name": "veeva-example-clm",
+  "version":"0.0.1",
   "private": true,
   "description": "Example of how to setup a project using the Veezard node module",
   "dependencies": {

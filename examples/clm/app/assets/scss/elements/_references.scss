@@ -1,0 +1,45 @@
+#references_container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+  z-index: 222;
+  &.references-active {
+    display: block;
+  }
+  #references_mask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+  }
+  .references-close-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 10px;
+  }
+  .references-content {
+    background: #FFF;
+    width: 840px;
+    color: #333;
+    margin: auto;
+    position: absolute;
+    top: 80px;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    ol {
+      list-style: decimal;
+      margin: 0 0 0 30px;
+      li {
+        padding: 0 0 0 5px;
+      }
+    }
+  }
+
+}

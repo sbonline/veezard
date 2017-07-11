@@ -1,30 +1,28 @@
-{{debug}}
-
 <header>
   <div class="dd-main">
 
     <ul>
-      {{#each keyMessages}}
 
-        {{#contains key_message section}}
-          <li>
-            <a href="#" >
-              {{../description}}
-            </a>
-          </li>
-        {{/contains}}
-      {{/each}}
+      <li>
+        <a href="#" >
+          {{title}}
+        </a>
+      </li>
 
       {{#each keyMessages}}
-        {{#isnt kmsg.key_message section}}
           <li>
-            <a href="#" data-key-message="{{kmsg.key_message}}" class="btn-external">
-              {{kmsg.description}}
+            <a href="#" data-key-message="{{key_message}}" class="btn-external">
+              {{description}}
             </a>
           </li>
-        {{/isnt}}
       {{/each}}
     </ul>
     <img class="triangle" src="global/images/triangle.svg" width="16" height="16" />
   </div>
+
+
+  <div class="refs-popup-btn-container">
+    <a href="#" class="refs-btn" ><img src="global/images/refs.svg" width="32" height="32" /></a>
+  </div>
+
 </header>

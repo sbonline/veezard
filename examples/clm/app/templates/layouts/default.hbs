@@ -44,7 +44,6 @@
          * Listen for veeva.app.ready to fire
          */
         VeevaPresentaion.appBody.on("veeva.app.ready", function(event){
-
            /**
              * Load page-specific scripts
              */
@@ -62,9 +61,29 @@
                 });
             {{/is}}
 
+            {{#each keyMessages}}
+              {{#contains key_message ../section}}
+                window.cur_refs = [{{join ../refs}}];
+                /*var references = [];
+                {{#each ../refs}}
+                  references.push({{this}});
+                {{/each}}
+                */
+                head.load(['global/js/refs.js?v=0.0.7'], function(){
+                    console.log('R U Ready MF???');
+                });
+              {{/contains}}
+            {{/each}}
+
 
         });
 
     </script>
+    <div id="references_container">
+      <div id="references_mask"></div>
+      <span class="references-close-btn">&times;</span>
+      <!-- here comes references -->
+      <div class="references-content"></div>
+    </div>
 </body>
 </html>

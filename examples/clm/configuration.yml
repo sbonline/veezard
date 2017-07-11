@@ -23,6 +23,10 @@ clm:
     slides:
     - slide: 'Home Veeva CLM Example'
       id: '0'
+    refs:
+      - 2
+      - 4
+      - 5
   - key_message: 'overview'
     description: 'Veeva Test Overview'
     display_order: '1'
@@ -33,24 +37,40 @@ clm:
       id: '2-1'
     - slide: 'Sub Slide 2'
       id: '2-2'
+    refs:
+      - 1
+      - 3
+      - 4
   - key_message: 'sitemap'
     description: 'Sitemap'
     display_order: '2'
     slides:
     - slide: 'Sitemap'
       id: '0-1'
+    refs:
+      - 1
+      - 3
+      - 4
   - key_message: 'resources'
     description: 'Resources'
     display_order: '3'
     slides:
     - slide: 'Resources'
       id: '0-2'
+    refs:
+      - 2
+      - 3
+      - 4
  assets:
   name: 'veeva-assets-v1'
   key_messages:
   - key_message: 'prescribing-information'
     description: 'Prescribing Information'
     display_order: 0
+    refs:
+      - 2
+      - 4
+      - 5
   - key_message: 'patient-brochure'
     description: 'Patient Brochure'
     display_order: 2
